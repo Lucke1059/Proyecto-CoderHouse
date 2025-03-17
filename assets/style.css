@@ -26,7 +26,12 @@ footer { /*Colocando el footer en la parte inferior y de manera fija*/
     font-size: 2rem;
 }
 
-.bg-primary { /*Fuerzo el cambio de bootstrap para cambiar el color de los bordes del sitio*/
+/*Fuerzo algunos cambios de bootstrap para cambiar el color de ciertos lugares del sitio*/
+.bg-primary { 
+    background-color: lightyellow !important;
+}
+
+.bg-secondary {
     background-color: darkblue !important;
 }
 
@@ -34,7 +39,7 @@ footer { /*Colocando el footer en la parte inferior y de manera fija*/
 
 /*Combinación para darle apariencia al menú*/
 .nav-item:hover {
-    background-color: grey;
+    background-color: lightskyblue;
 }
 .nav-link:hover {
     color: white;
@@ -45,14 +50,13 @@ footer { /*Colocando el footer en la parte inferior y de manera fija*/
     border-radius: 5%;
     border-width: 0.5px;
     border-top: none;
-    border-bottom: none;
     border-color: lightblue;
 }
 
 nav a.active { /*Dándole estilos al item activo del menú*/
-    background-color: lightgrey;
+    background-color: lightblue;
     font-weight: bold;
-    color: darkblue;
+    color: white;
     border-bottom: 2px solid darkblue; /* Para que tenga una línea abajo */
 }
 
