@@ -6,8 +6,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com"> <!--Preconecto con Google Fonts para acelerar la carga de la fuente-->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet"> <!--Vinculo la fuente Oswald-->
-    <link rel="stylesheet" href="../assets/style.css"> <!--Vinculo la hoja de estilos-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous"> <!--Vinculo bootstrap-->
+    <link rel="stylesheet" href="../assets/style.css"> <!--Vinculo la hoja de estilos-->
     <title>NOSOTROS | LA NUEVA TERMINAL</title>
 </head>
 <body>
@@ -19,9 +19,9 @@
             <ul class="nav border-left border-right">
                 <li class="nav-item"><a class="nav-link" href="index.html">INICIO</a></li>
                 <li class="nav-item"><a class="nav-link" href="menucomidas.html">MENU DE COMIDAS</a></li>
-                <li class="nav-item"><a class="nav-link" href="acercade.html">ACERCA DE</a></li>
-                <li class="nav-item"><a class="nav-link" href="contrataciones.html">CONTRATACIONES</a></li>
                 <li class="nav-item"><a class="nav-link" href="nosotros.html">NOSOTROS</a></li>
+                <li class="nav-item"><a class="nav-link" href="contrataciones.html">CONTRATACIONES</a></li>
+                <li class="nav-item"><a class="nav-link" href="acercade.html">ACERCA DE</a></li>
             </ul>
         </nav>
     </header>
@@ -32,11 +32,24 @@
             <div class="col-md-8">
                 <!-- Contenido principal -->
                 <main class="text-center py-4">
-                    <h2>ROTISERIA</h2>
-                    <p>La rotisería de La Nueva Terminal es un lugar donde podrás disfrutar de una gran variedad de comidas rápidas y deliciosas...</p>
+                    <h2 class="subtitulos">NUESTRO EQUIPO</h2>
+                    <p>¡Conocé a quienes se encargan de que todo esté preparado de la mejor manera para vos!</p>
                 </main>
+                <div class="menu-grid">
+                    <div class="grid-item">
+                        <img src="../assets/images/Persona1.jpg" alt="Chef 1">
+                        <h3 class="nombre_cocinero">Laura Rodriguez</h3>
+                        <p class="detalles_cocinero">La cara visible de nuestro restaurant. Laura se encarga de brindarte una cordial y excepcional atención.</p>
+                    </div>
+                    <div class="grid-item">
+                        <img src="../assets/images/Persona3.jpg" alt="Chef 2">
+                        <h3 class="nombre_cocinero">Martín Hernández</h3>
+                        <p class="detalles_cocinero">Con más de 15 años de experiencia, Martín es el encargado de la rotisería y de la elaboración de los mejores platos del lugar.</p>
+                    </div>
+                    <br><br><br>
+                </div>
             </div>
-            <div class="col-md-2 bg-primary d-none d-md-block"></div> <!-- Márgenes de color -->
+            <div class="col-md-2 bg-primary d-none d-md-block"></div> <!-- Márgenes de color -->    
         </div>
     </div>
 
