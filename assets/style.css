@@ -3,3 +3,200 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+footer { /*Colocando el footer en la parte inferior y de manera fija*/
+    position: fixed;
+    margin-top: auto;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #343a40;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+#header_titulo { /*Dándole estilos al título del header*/
+    font-family: Oswald;
+    font-size: 5rem;
+}
+
+.subtitulos { /*Formato de los subtítulos de cada sitio*/
+    font-family: Oswald;
+    font-size: 2rem;
+}
+
+.bg-primary { /*Fuerzo el cambio de bootstrap para cambiar el color de los bordes del sitio*/
+    background-color: darkblue !important;
+}
+
+/*MENU DE NAVEGACIÓN*/
+
+/*Combinación para darle apariencia al menú*/
+.nav-item:hover {
+    background-color: grey;
+}
+.nav-link:hover {
+    color: white;
+}
+
+.nav-item { /*Dándole estilos a los items del menú de navegación*/
+    border-style: solid;
+    border-radius: 5%;
+    border-width: 0.5px;
+    border-top: none;
+    border-bottom: none;
+    border-color: lightblue;
+}
+
+nav a.active { /*Dándole estilos al item activo del menú*/
+    background-color: lightgrey;
+    font-weight: bold;
+    color: darkblue;
+    border-bottom: 2px solid darkblue; /* Para que tenga una línea abajo */
+}
+
+/*PANTALLA PRINCIPAL - INDEX*/
+
+.banner img { /*Banner de la rotisería*/
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/*Efectos para el botón que lleva al menú*/
+.btn-success { 
+    transition: transform 0.2s ease-in-out, background 0.3s;
+}
+
+.btn-success:hover { 
+    transform: scale(1.05);
+    background: #28a745;
+}
+
+/*MENU DE COMIDAS*/
+
+#menu_comidas_grid { /*Dándole estilos al grid de las comidas*/
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas */
+    gap: 20px; /* Espacio entre las imágenes */
+    justify-items: center; /* Centra los elementos */
+}
+
+.menu-item { /*Dándole estilos a los items del menú de comidas*/
+    position: relative;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.menu_comidas_items img { /*Dándole estilos a las imágenes de las comidas*/
+    width: 100%;
+    max-width: 350px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Efecto Hover para las imágenes */
+.menu-item:hover {
+    transform: scale(1.05);
+}
+
+.menu_comidas_items h3 { /*Dándole estilos a los títulos de las comidas*/
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 1.2rem;
+}
+
+.nombre_cocinero {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    color: lightblue;
+}
+
+.detalles_cocinero {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: lighter;
+}
+
+/*NOSOTROS*/
+
+.menu-grid { /*Aplicando grid*/
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Se adapta a distintos tamaños */
+    gap: 20px;
+    justify-items: center;
+    padding: 20px;
+}
+
+/*Dándole forma a las tarjetas*/
+.grid-item { 
+    background: #ffffff; 
+    padding: 20px;
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra */
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Efecto suave */
+}
+
+.grid-item:hover { 
+    transform: scale(1.05); /* Pequeño zoom al pasar el mouse */
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+.grid-item img { /*Controlando el tamaño de las imágenes*/
+    width: 100%;
+    max-width: 200px; /* Controla el tamaño de la imagen */
+    height: auto;
+    border-radius: 50%; /* Hace las imágenes redondas */
+    object-fit: cover;
+}
+
+.nombre_cocinero { /*Formato de los nómbres de c/u de los participantes*/
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 10px;
+    color: #333;
+}
+
+.detalles_cocinero { /*Formato de los textos descriptivos de c/u de los participantes*/
+    font-size: 1rem;
+    color: #555;
+    margin-top: 5px;
+}
+
+/*CONTRATACIONES*/
+/*Tarjetas de ventajas*/
+.card { 
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.card:hover { /**/
+    transform: scale(1.05);
+}
+
+/*Botones de contacto*/
+.btn {
+    font-size: 1.2rem;
+}
+
+/*ACERCA DE*/
+.subtitulos {
+    font-weight: bold;
+    color: #333;
+}
+
+.historia {
+    font-size: 1.2rem;
+    color: #555;
+    max-width: 800px;
+    margin: 0 auto;
+}
