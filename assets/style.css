@@ -4,8 +4,9 @@
     box-sizing: border-box;
 }
 
-footer {
+footer { /*Colocando el footer en la parte inferior y de manera fija*/
     position: fixed;
+    margin-top: auto;
     bottom: 0;
     left: 0;
     width: 100%;
@@ -23,11 +24,61 @@ footer {
     color: white;
 }
 
-.nav-item {
+.nav-item { /*Dándole estilos a los items del menú de navegación*/
     border-style: solid;
     border-radius: 5%;
     border-width: 0.5px;
     border-top: none;
     border-bottom: none;
     border-color: lightblue;
+}
+
+nav a.active { /*Dándole estilos al item activo del menú*/
+    background-color: lightgrey;
+    font-weight: bold;
+    color: darkblue; /* O el color que prefieras */
+    border-bottom: 2px solid darkblue; /* Para que tenga una línea abajo */
+}
+
+#header_titulo { /*Dándole estilos al título del header*/
+    font-family: Oswald;
+    font-size: 5rem;
+} 
+
+#menu_comidas_grid { /*Dándole estilos al grid de las comidas*/
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas */
+    gap: 20px; /* Espacio entre las imágenes */
+    justify-items: center; /* Centra los elementos */
+}
+
+.menu_comidas_items { /*Dándole estilos a los items del grid de las comidas*/
+    position: relative;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.menu_comidas_items img { /*Dándole estilos a las imágenes de las comidas*/
+    width: 100%;
+    max-width: 350px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Efecto Hover para las imágenes */
+.menu-item:hover {
+    transform: scale(1.05);
+}
+
+.menu_comidas_items h3 { /*Dándole estilos a los títulos de las comidas*/
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 1.2rem;
 }
