@@ -3,10 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../assets/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> <!--Preconecto con Google Fonts para acelerar la carga de la fuente-->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet"> <!--Vinculo la fuente Oswald-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous"> <!--Vinculo bootstrap-->
+    <link rel="stylesheet" href="../assets/style.css"> <!--Vinculo la hoja de estilos-->
     <title>MENU DE COMIDAS | LA NUEVA TERMINAL</title>
 </head>
 <body>
+    <!-- Header -->
+    <header class="d-flex align-items-center justify-content-between p-3 border-bottom border-color-primary">
+        <img src="../assets/images/Logo-La_Nueva_Terminal.png" alt="Logo de La Nueva Terminal" height="100rem">
+        <h1 class="flex-grow-1 text-center m-0" id="header_titulo">LA NUEVA TERMINAL</h1>
+        <nav>
+            <ul class="nav border-left border-right">
+                <li class="nav-item"><a class="nav-link" href="index.html">INICIO</a></li>
+                <li class="nav-item"><a class="nav-link" href="menucomidas.html">MENU DE COMIDAS</a></li>
+                <li class="nav-item"><a class="nav-link" href="nosotros.html">NOSOTROS</a></li>
+                <li class="nav-item"><a class="nav-link" href="contrataciones.html">CONTRATACIONES</a></li>
+                <li class="nav-item"><a class="nav-link" href="acercade.html">ACERCA DE</a></li>
+            </ul>
+        </nav>
+    </header>
     
+    <div class="container-fluid"> <!-- Contenedor principal -->
+        <div class="row">
+            <div class="col-md-2 bg-primary d-none d-md-block"></div> <!-- Márgenes de color -->
+            <div class="col-md-8">
+                <!-- Contenido principal -->
+                <main class="container my-5">
+                    <div class="menu-grid" id="menu_comidas_grid"> <!-- Grid de menú -->
+                        <div class="menu-item">
+                            <h3>🍔 Hamburguesas</h3>
+                            <img src="../assets/images/hamburg.jpg" alt="Hamburguesas">
+                        </div>
+                        <div class="menu-item">
+                            <h3>🍕 Pizzas</h3>
+                            <img src="../assets/images/Pizzas.jpg" alt="Pizzas">
+                        </div>
+                        <div class="menu-item">
+                            <h3>🥪 Sándwiches</h3>
+                            <img src="../assets/images/sandwiches.jpg" alt="Sandwiches">
+                        </div>
+                        <div class="menu-item">
+                            <h3>🥟 Empanadas</h3>
+                            <img src="../assets/images/empanadas.jpg" alt="Empanadas">
+                        </div>
+                        <br>
+                    </div>
+                </main>
+            </div>
+            <div class="col-md-2 bg-primary d-none d-md-block"></div> <!-- Márgenes de color -->
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light text-center p-3 mt-5">
+        &copy; 2025 | La Nueva Terminal | Todos los derechos reservados
+    </footer>
+    
+    <!-- JavaScript y otras Vinculaciones -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+    <script> // Script para resaltar la página actual en el menú
+        document.addEventListener("DOMContentLoaded", function () {
+            let currentPage = window.location.pathname.split("/").pop(); // Obtiene el nombre del archivo actual
+            let links = document.querySelectorAll("nav a"); 
+            
+            links.forEach(link => {
+                if (link.getAttribute("href") === currentPage) {
+                    link.classList.add("active"); // Agrega la clase active
+                }
+            });
+        });
+    </script>
 </body>
 </html>
