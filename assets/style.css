@@ -132,22 +132,20 @@ nav a.active { /*Dándole estilos al item activo del menú*/
 
 /*NOSOTROS*/
 
-.menu-grid { /*Aplicando grid*/
+.menu-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Se adapta a distintos tamaños */
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas en pantallas grandes */
     gap: 20px;
-    justify-items: center;
     padding: 20px;
+    justify-content: center;
 }
 
 /*Dándole forma a las tarjetas*/
-.grid-item { 
-    background: #ffffff; 
-    padding: 20px;
-    border-radius: 10px; /* Bordes redondeados */
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra */
+.grid-item {
+    background: white;
+    border-radius: 10px;
+    padding: 10px;
     text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Efecto suave */
 }
 
 .grid-item:hover { 
@@ -155,12 +153,11 @@ nav a.active { /*Dándole estilos al item activo del menú*/
     box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.2);
 }
 
-.grid-item img { /*Controlando el tamaño de las imágenes*/
+.grid-item img {
     width: 100%;
-    max-width: 200px; /* Controla el tamaño de la imagen */
     height: auto;
-    border-radius: 50%; /* Hace las imágenes redondas */
-    object-fit: cover;
+    max-width: 300px; /* Evita que las imágenes sean muy grandes */
+    border-radius: 10px;
 }
 
 .nombre_cocinero { /*Formato de los nómbres de c/u de los participantes*/
@@ -204,3 +201,91 @@ nav a.active { /*Dándole estilos al item activo del menú*/
     max-width: 800px;
     margin: 0 auto;
 }
+
+/* EFECTOS VISUALES EN GENERAL */
+
+/* Sombras en las secciones principales */
+main {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Sombras en imágenes */
+img {
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Efecto de agrandar en hover */
+.btn:hover {
+    transform: scale(1.05);
+    transition: 0.3s ease-in-out;
+}
+
+/* Efecto en imágenes */
+img:hover {
+    transform: scale(1.03);
+    transition: 0.3s ease-in-out;
+    filter: brightness(1.1);
+}
+
+/*Color de fondo degragado*/
+body {
+    background: linear-gradient(to right, yellow, #ff5e62);
+}
+
+/* Animación de fade-in */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 0.8s ease-in-out forwards;
+}
+
+/* Keyframes para la animación */
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ----------- MEDIA QUERIES PARA MÓVILES ----------- */
+@media (max-width: 768px) {
+    /* OCULTAR MÁRGENES LATERALES */
+    .bg-primary {
+        display: none;
+    }
+
+    /* AJUSTAR EL HEADER */
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header img {
+        margin: 0 auto;
+    }
+
+    /* MENÚ RESPONSIVO */
+    nav ul {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    /* GRID DE UNA SOLA COLUMNA EN MÓVILES */
+    .menu-grid {
+        grid-template-columns: 1fr !important; /* Solo 1 columna en móviles */
+    }
+    
+    .grid-item {
+        width: 100% !important;  /* Que ocupe todo el ancho */
+    }
+
+    .grid-item img {
+        max-width: 100% !important; /* Que la imagen se adapte al ancho del contenedor */
+    }
+}
+
+
